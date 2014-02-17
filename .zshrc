@@ -31,6 +31,8 @@ alias djum="manage.py makemessages -a"
 alias djcm="manage.py compilemessages"
 alias djm="manage.py"
 
+alias via="source virtenv/bin/activate"
+
 # Completion.
 fpath=(~/.zsh/completion $fpath)
 

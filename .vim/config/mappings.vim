@@ -13,7 +13,7 @@ map <C-l> <C-w>l
 
 " Buffer handling.
 map <leader>b :LustyJuggler<cr>
-map <leader>q :bunload<cr>
+map <leader>q :bdelete<cr>
 map <leader>Q :BufOnly<cr>
 
 " Reload .vimrc.
@@ -30,3 +30,11 @@ map <leader>t :NERDTreeToggle<cr>
 
 " Gundo.
 map <leader>u :GundoToggle<cr>
+
+" Git (Fugitive).
+map <leader>gs :Gstatus<cr>
+map <leader>gc :Gcommit<cr>
+map <leader>gb :Gblame<cr>
+
+" Setup custom filetype handlers and settings.
+map <leader>Fm :call MailSetup()<cr>

@@ -43,13 +43,14 @@ set wildmenu
 set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
-set cursorline
+set nocursorline
 set t_Co=256
+set linespace=3
 syntax enable
 
 if has( "gui_running" )
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
-	colorscheme oceandeep
+	colorscheme manuscript
 	set guioptions=agit
 else
 	colorscheme default
@@ -77,3 +78,4 @@ source $VIMRUNTIME/macros/matchit.vim
 " Load further configs.
 source ~/.vim/config/mappings.vim
 source ~/.vim/config/filetypes.vim
+source ~/.vim/config/commands.vim
