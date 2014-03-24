@@ -49,7 +49,7 @@ set linespace=3
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
 	colorscheme manuscript
 	set guioptions=agit
 else

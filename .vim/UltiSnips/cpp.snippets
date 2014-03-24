@@ -1,6 +1,6 @@
 snippet sce
-SCENARIO( "${1}", "[${2}]" ) {
-	${3}
+SCENARIO( "${1}" ) {
+	${2}
 }
 endsnippet
 
@@ -28,4 +28,12 @@ endsnippet
 
 snippet chk
 CHECK( ${1} );${2}
+endsnippet
+
+snippet ns "ns" !
+namespace ${1} {
+
+${2}
+
+}
 endsnippet

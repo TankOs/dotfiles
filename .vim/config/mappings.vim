@@ -38,3 +38,10 @@ map <leader>gb :Gblame<cr>
 
 " Setup custom filetype handlers and settings.
 map <leader>Fm :call MailSetup()<cr>
+
+" C++ editing.
+map <leader>+b $s {<esc>o}<esc>o<esc>j$
+
+" Diff.
+map <leader>dt :diffthis<cr>
+map <leader>do :diffoff<cr>
