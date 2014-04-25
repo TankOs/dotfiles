@@ -38,6 +38,7 @@ map <leader>gb :Gblame<cr>
 
 " Setup custom filetype handlers and settings.
 map <leader>Fm :call MailSetup()<cr>
+map <leader>Fs :call SFMLSetup()<cr>
 
 " C++ editing.
 map <leader>+b $s {<esc>o}<esc>o<esc>j$
@@ -45,3 +46,8 @@ map <leader>+b $s {<esc>o}<esc>o<esc>j$
 " Diff.
 map <leader>dt :diffthis<cr>
 map <leader>do :diffoff<cr>
+
+" CtrlP.
+map <leader>ff :CtrlP<cr>
+map <leader>fb :CtrlPBuffer<cr>
+map <leader>fa :CtrlPMixed<cr>

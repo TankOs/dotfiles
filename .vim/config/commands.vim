@@ -4,3 +4,11 @@ fun! MailSetup()
 	setl et
 	echom "Mail setup complete."
 endfun
+
+fun! SFMLSetup()
+	set fileformat=dos
+	set expandtab
+	set shiftwidth=4
+	set tabstop=4
+	echom "GLOBAL SFML setup complete."
+endfun

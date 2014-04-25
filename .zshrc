@@ -38,3 +38,4 @@ fpath=(~/.zsh/completion $fpath)
 
 export TERM=xterm
 export PATH=$PATH:/home/stefan/bin
+export GREP_OPTIONS="--color=always"
