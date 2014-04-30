@@ -51,3 +51,6 @@ map <leader>do :diffoff<cr>
 map <leader>ff :CtrlP<cr>
 map <leader>fb :CtrlPBuffer<cr>
 map <leader>fa :CtrlPMixed<cr>
+
+" Random colorscheme.
+map <leader>r :colorscheme random<cr>

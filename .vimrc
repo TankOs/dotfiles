@@ -51,8 +51,7 @@ syntax enable
 if has( "gui_running" )
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 	set background=light
-	colorscheme zenesque
-	"colorscheme badwolf
+	colorscheme cthulhian
 	set guioptions=agit
 else
 	colorscheme default
