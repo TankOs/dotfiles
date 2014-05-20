@@ -33,9 +33,12 @@ alias djm="manage.py"
 
 alias via="source virtenv/bin/activate"
 
+alias nemo="nemo --no-desktop"
+
 # Completion.
 fpath=(~/.zsh/completion $fpath)
 
 export TERM=xterm
 export PATH=$PATH:/home/stefan/bin
 export GREP_OPTIONS="--color=always"
+export EDITOR=vim

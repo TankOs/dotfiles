@@ -52,5 +52,5 @@ map <leader>ff :CtrlP<cr>
 map <leader>fb :CtrlPBuffer<cr>
 map <leader>fa :CtrlPMixed<cr>
 
-" Random colorscheme.
-map <leader>r :colorscheme random<cr>
+" Run LÖVE game.
+map <leader>rl :!love .<cr>
