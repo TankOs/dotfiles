@@ -39,6 +39,6 @@ alias nemo="nemo --no-desktop"
 fpath=(~/.zsh/completion $fpath)
 
 export TERM=xterm
-export PATH=$PATH:/home/stefan/bin
+export PATH=$PATH:/home/stsch/bin
 export GREP_OPTIONS="--color=always"
 export EDITOR=vim
