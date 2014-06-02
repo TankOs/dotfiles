@@ -40,3 +40,9 @@
 [submodule ".vim/bundle/vimoutliner"]
 	path = .vim/bundle/vimoutliner
 	url = https://github.com/vimoutliner/vimoutliner
+[submodule ".vim/bundle/tern-meteor"]
+	path = .vim/bundle/tern-meteor
+	url = https://github.com/Slava/tern-meteor
+[submodule ".vim/bundle/vim-spacebars"]
+	path = .vim/bundle/vim-spacebars
+	url = https://github.com/Slava/vim-spacebars

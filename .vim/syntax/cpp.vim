@@ -21,7 +21,7 @@ else
 endif
 
 " C++ extensions
-syn keyword cppStatement	new delete this friend using SCENARIO GIVEN WHEN THEN
+syn keyword cppStatement	new delete this friend using SCENARIO GIVEN WHEN THEN SECTION TEST_CASE
 syn keyword cppAccess		public protected private
 syn keyword cppType		inline virtual explicit export bool wchar_t
 syn keyword cppExceptions	throw try catch CHECK REQUIRE

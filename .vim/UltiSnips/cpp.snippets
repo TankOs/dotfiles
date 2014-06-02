@@ -30,6 +30,19 @@ snippet chk
 CHECK( ${1} );${2}
 endsnippet
 
+snippet sec
+SECTION( "${1}" ) {
+	${2}
+}
+endsnippet
+
+snippet tc
+TEST_CASE( "${1}" ) {
+	${2}
+}
+endsnippet
+
+
 snippet ns "ns" !
 namespace ${1} {
 

@@ -39,6 +39,7 @@ map <leader>gb :Gblame<cr>
 " Setup custom filetype handlers and settings.
 map <leader>Fm :call MailSetup()<cr>
 map <leader>Fs :call SFMLSetup()<cr>
+map <leader>Fb :setf spacebars<cr>
 
 " C++ editing.
 map <leader>+b $s {<esc>o}<esc>o<esc>j$

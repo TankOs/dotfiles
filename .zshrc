@@ -4,8 +4,18 @@ SAVEHIST=1000
 
 bindkey -e
 zstyle :compinstall filename '/home/stefan/.zshrc'
-autoload -Uz compinit
+
+autoload -U compinit
+autoload -U colors && colors
+autoload -U promptinit
+
 compinit
+promptinit
+
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt autocd
+setopt correctall
 
 CHROOT_NAME=""
 
@@ -13,8 +23,17 @@ if [ -n "${SCHROOT_CHROOT_NAME}" ]; then
 	CHROOT_NAME="%U%B(${SCHROOT_CHROOT_NAME})%b%u "
 fi
 
-PS1="${CHROOT_NAME}%B%U%n%u@%m:%~%#%b "
+PS1="$fg[green]${CHROOT_NAME}%{%B%n@%m%b$fg[cyan]%} %d
+%{$fg[white]%}%#%{$reset_color%} "
 COLORS="--color=always"
+
+precmd() {
+	print ""
+}
+
+preexec() {
+	print ""
+}
 
 alias ll="ls -l $COLORS"
 alias la="ls -la $COLORS"
