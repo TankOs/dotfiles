@@ -15,7 +15,6 @@ promptinit
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt autocd
-setopt correctall
 
 CHROOT_NAME=""
 
