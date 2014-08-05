@@ -1,24 +1,9 @@
-# Tabs
-caption always "%{kw}%-w%{ky}%n %t%{-}%+w %=%{bw}@%H%{kw} %D %Y-%m-%d %c"
-hardstatus string "[%H]"
+#caption always "%{kw}%-w%{ky}%n %t%{-}%+w %=%{bw}@%H%{kw} %D %Y-%m-%d %c"
+#hardstatus string "[%H]"
+startup_message off
 
-# Ctrl-PageUp/Down or Alt-PageUp/Down or Alt-left/right
-bindkey ^[[5;5~ prev
-bindkey ^[[6;5~ next
-#bindkey ^[[5;3~ prev
-#bindkey ^[[6;3~ next
-#bindkey ^[[1;3D prev
-#bindkey ^[[1;3C next
-
-# putty uses Ctrl-PageUp/Down by itself
-# so only Alt-PageUp/Down and Alt-left/right
-#bindkey ^[^[[5~ prev
-#bindkey ^[^[[6~ next
-#bindkey ^[^[OD prev
-#bindkey ^[^[OC next
-
-# Ctrl-Shift-T
-bindkey ^T screen
-
-# Scrollen im xterm
-termcapinfo xterm|xterms|xs|rxvt ti@:te@
+backtick 1 5 5 true
+termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
+hardstatus string "screen (%n: %t)"
+caption string "%{= kw}%Y-%m-%d;%c %{= kw}%-Lw%{= kG}%{+b}[%n %t]%{-b}%{= kw}%+Lw%1`"
+caption always
