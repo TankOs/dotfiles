@@ -1,7 +1,7 @@
 #caption always "%{kw}%-w%{ky}%n %t%{-}%+w %=%{bw}@%H%{kw} %D %Y-%m-%d %c"
 #hardstatus string "[%H]"
 startup_message off
-
+scrollback 1000
 backtick 1 5 5 true
 termcapinfo rxvt* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
 hardstatus string "screen (%n: %t)"

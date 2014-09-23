@@ -32,9 +32,10 @@ map <leader>t :NERDTreeToggle<cr>
 map <leader>u :GundoToggle<cr>
 
 " Git (Fugitive).
-map <leader>gs :Gstatus<cr>
-map <leader>gc :Gcommit<cr>
-map <leader>gb :Gblame<cr>
+map <leader>Gs :Gstatus<cr>
+map <leader>Gc :Gcommit<cr>
+map <leader>Gb :Gblame<cr>
+map <leader>Gd :Gdiff<cr>
 
 " Setup custom filetype handlers and settings.
 map <leader>Fm :call MailSetup()<cr>
@@ -53,5 +54,8 @@ map <leader>ff :CtrlP<cr>
 map <leader>fb :CtrlPBuffer<cr>
 map <leader>fa :CtrlPMixed<cr>
 
-" Run LÖVE game.
-map <leader>rl :!love .<cr>
+" eXecute LÖVE game.
+map <leader>xl :!love .<cr>
+
+" Reset workspace for test, header and implementation.
+map <leader>rw <leader>Q<leader>q<c-w>v<c-w>l<c-w>s<c-w>h
