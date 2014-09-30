@@ -11,6 +11,7 @@ set cindent
 set shiftwidth=2
 set tabstop=2
 set textwidth=0
+set expandtab
 
 " Buffer settings.
 set autoread
@@ -28,7 +29,7 @@ set ffs=unix,dos,mac
 
 " Look & feel.
 set cmdheight=2
-set colorcolumn=80
+set colorcolumn=79
 set hlsearch
 set history=1000
 set lazyredraw
