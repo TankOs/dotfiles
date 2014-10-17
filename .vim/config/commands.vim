@@ -6,7 +6,6 @@ fun! MailSetup()
 endfun
 
 fun! SFMLSetup()
-	set fileformat=dos
 	set expandtab
 	set shiftwidth=4
 	set tabstop=4
