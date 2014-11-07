@@ -59,3 +59,6 @@ map <leader>xl :!love .<cr>
 
 " Reset workspace for test, header and implementation.
 map <leader>rw <leader>Q<leader>q<c-w>v<c-w>l<c-w>s<c-w>h
+
+" Yank whole buffer.
+map <leader>y :%y+<cr>:%y<cr>

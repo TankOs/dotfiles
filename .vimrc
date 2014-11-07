@@ -43,7 +43,7 @@ set scrolloff=7
 set wildmenu
 set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
-set showbreak=↪
+set showbreak=>
 set nocursorline
 set t_Co=256
 set linespace=3
@@ -52,7 +52,7 @@ syntax enable
 if has( "gui_running" )
 	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
 	set background=light
-	colorscheme cthulhian
+	colorscheme summerfruit256
 	set guioptions=agit
 else
 	colorscheme default
