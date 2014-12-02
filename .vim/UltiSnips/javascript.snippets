@@ -2,8 +2,36 @@ snippet log
 console.log( $1 );$2
 endsnippet
 
+snippet info
+console.info( $1 );$2
+endsnippet
+
+snippet error
+console.error( $1 );$2
+endsnippet
+
 snippet fun
-function($1) {
-	$2
-}$3
+function$1($2) {
+	$3
+}$4
+endsnippet
+
+snippet onfs
+function on_$1success( ${2:data} ) {
+	$3
+}
+
+function on_$1failure() {
+	$4
+}$5
+endsnippet
+
+snippet fix
+{
+	"model": "$1",
+	"pk": ${2:1},
+	"fields": {
+		$3
+	}
+}$4
 endsnippet

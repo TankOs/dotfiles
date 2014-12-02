@@ -40,6 +40,8 @@ alias rm="rm -i"
 
 alias cm="clear; make -j3"
 
+alias cgrep="grep --color=always"
+
 alias sose="source setup"
 alias djrs="manage.py runserver"
 alias djsm="manage.py schemamigration --auto"
@@ -51,7 +53,7 @@ alias djm="manage.py"
 
 alias via="source virtenv/bin/activate"
 
-alias nemo="nemo --no-desktop"
+alias initpymod="touch ${1}/__init__.py"
 
 # Completion.
 fpath=(~/.zsh/completion $fpath)
