@@ -1,63 +1,81 @@
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
 
-bindkey -e
-zstyle :compinstall filename '/home/stefan/.zshrc'
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="blinks"
 
-autoload -U compinit
-autoload -U colors && colors
-autoload -U promptinit
+# Uncomment the following line to use case-sensitive completion.
+CASE_SENSITIVE="true"
 
-compinit
-promptinit
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt autocd
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-CHROOT_NAME=""
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-if [ -n "${SCHROOT_CHROOT_NAME}" ]; then
-	CHROOT_NAME="%U%B(${SCHROOT_CHROOT_NAME})%b%u "
-fi
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-PS1="$fg[green]${CHROOT_NAME}%{%B%n@%m%b$fg[cyan]%} %d
-%{$fg[white]%}%#%{$reset_color%} "
-COLORS="--color=always"
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-precmd() {
-	print ""
-}
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
 
-preexec() {
-	print ""
-}
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-alias ll="ls -l $COLORS"
-alias la="ls -la $COLORS"
-alias rm="rm -i"
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yyyy-mm-dd"
 
-alias cm="clear; make -j3"
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-alias cgrep="grep --color=always"
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git virtualenv virtenvwrapper colorize django)
 
-alias sose="source setup"
-alias djrs="manage.py runserver"
-alias djsm="manage.py schemamigration --auto"
-alias djmi="manage.py migrate"
-alias djcs="manage.py collectstatic"
-alias djum="manage.py makemessages -a"
-alias djcm="manage.py compilemessages"
-alias djm="manage.py"
+# User configuration
 
-alias via="source virtenv/bin/activate"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
 
-alias initpymod="touch ${1}/__init__.py"
+source $ZSH/oh-my-zsh.sh
 
-# Completion.
-fpath=(~/.zsh/completion $fpath)
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
 
-export TERM=xterm
-export PATH=$PATH:/home/stsch/bin
-export EDITOR=vim
+# Preferred editor for local and remote sessions
+export EDITOR='vim'
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"

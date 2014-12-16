@@ -50,9 +50,9 @@ set linespace=3
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 10
+	set guifont=Deja\ Vu\ Sans\ Mono\ 9
 	set background=light
-	colorscheme summerfruit256
+	colorscheme Tomorrow-Night-Eighties
 	set guioptions=agit
 else
 	colorscheme default
