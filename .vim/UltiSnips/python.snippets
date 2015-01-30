@@ -10,3 +10,11 @@ snippet duni
 def __unicode__( self ):
 	return $1
 endsnippet
+
+snippet init
+def __init__( self, ${1:*args, **kwargs} ):
+	super( ${2}, self ).__init__( $1 )
+
+	${3}
+
+endsnippet

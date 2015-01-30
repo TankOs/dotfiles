@@ -44,15 +44,15 @@ set wildmenu
 set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=>
-set nocursorline
+set cursorline
 set t_Co=256
 set linespace=3
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Deja\ Vu\ Sans\ Mono\ 9
+	set guifont=Source\ Code\ Pro\ 10
 	set background=light
-	colorscheme Tomorrow-Night-Eighties
+	colorscheme github
 	set guioptions=agit
 else
 	colorscheme default
