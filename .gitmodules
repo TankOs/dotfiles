@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/Dev_Delight"]
 	path = .vim/bundle/Dev_Delight
 	url = https://github.com/sandeepsinghmails/Dev_Delight.git
+[submodule ".vim/bundle/vim-jade"]
+	path = .vim/bundle/vim-jade
+	url = https://github.com/digitaltoad/vim-jade

@@ -46,7 +46,7 @@ set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=>
 set cursorline
 set t_Co=256
-set linespace=3
+set linespace=1
 syntax enable
 
 if has( "gui_running" )
