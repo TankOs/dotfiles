@@ -81,3 +81,6 @@ source $VIMRUNTIME/macros/matchit.vim
 source ~/.vim/config/mappings.vim
 source ~/.vim/config/filetypes.vim
 source ~/.vim/config/commands.vim
+
+" CtrlP settings.
+let g:ctrlp_custom_ignore = 'node_modules'

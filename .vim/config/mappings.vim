@@ -50,9 +50,7 @@ map <leader>dt :diffthis<cr>
 map <leader>do :diffoff<cr>
 
 " CtrlP.
-map <leader>ff :CtrlP<cr>
-map <leader>fb :CtrlPBuffer<cr>
-map <leader>fa :CtrlPMixed<cr>
+map <leader>f :CtrlP<cr>
 
 " eXecute LÖVE game.
 map <leader>xl :!love .<cr>
