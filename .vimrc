@@ -50,9 +50,9 @@ set linespace=1
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Source\ Code\ Pro\ 10
+	set guifont=Source\ Code\ Pro\ 9
 	set background=light
-	colorscheme github
+	colorscheme oceandeep
 	set guioptions=agit
 else
 	colorscheme default
