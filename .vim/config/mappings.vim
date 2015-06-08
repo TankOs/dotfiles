@@ -56,7 +56,8 @@ map <leader>f :CtrlP<cr>
 map <leader>xl :!love .<cr>
 
 " Reset workspace.
-map <leader>rw <leader>Q<leader>q<c-w>v
+map <leader>rw <leader>Q<leader>q<c-w>v<c-w>v<c-l>
+map <leader>Rw :BufOnly!<cr><leader>q<c-w>v<c-w>v<c-l>
 
 " Yank whole buffer.
 map <leader>y :%y+<cr>:%y<cr>

@@ -1,51 +1,22 @@
-snippet sce
-SCENARIO( "${1}" ) {
-	${2}
-}
-endsnippet
-
-snippet giv
-GIVEN( "${1}" ) {
-	${2}
-}
-endsnippet
-
-snippet when
-WHEN( "${1}" ) {
-	${2}
-}
-endsnippet
-
-snippet then
-THEN( "${1}" ) {
-	${2}
-}
-endsnippet
-
 snippet req
-REQUIRE( ${1} );${2}
+REQUIRE_FALSE(${1});${2}
 endsnippet
 
 snippet chk
-CHECK( ${1} );${2}
-endsnippet
-
-snippet chkf
-CHECK_FALSE( ${1} );${2}
+CHECK_FALSE(${1});${2}
 endsnippet
 
 snippet sec
-SECTION( "${1}" ) {
+SECTION("${1}") {
 	${2}
 }
 endsnippet
 
 snippet tc
-TEST_CASE( "${1}" ) {
+TEST_CASE("${1}") {
 	${2}
 }
 endsnippet
-
 
 snippet ns "ns" !
 namespace ${1} {
@@ -71,43 +42,47 @@ snippet el "el" !
 std::endl
 endsnippet
 
-snippet u32
+snippet u32 "u32" !w
 uint32_t
 endsnippet
 
-snippet i32
+snippet i32 "i32" !w
 int32_t
 endsnippet
 
-snippet u16
+snippet u16 "u16" !w
 uint16_t
 endsnippet
 
-snippet i16
+snippet i16 "i16" !w
 int16_t
 endsnippet
 
-snippet u8
+snippet u8 "u8" !w
 uint8_t
 endsnippet
 
-snippet i8
+snippet i8 "i8" !w
 int8_t
 endsnippet
 
-snippet u64
+snippet u64 "u64" !w
 uint64_t
 endsnippet
 
-snippet i64
+snippet i64 "i64" !w
 int64_t
 endsnippet
 
-snippet 2f
+snippet 2f "2f" !w
 sf::Vector2f
 endsnippet
 
-snippet 2u8
+snippet 2i "2i" !w
+sf::Vector2i
+endsnippet
+
+snippet 2u8 "2u8" !w
 sf::Vector2u8
 endsnippet
 

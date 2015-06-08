@@ -35,3 +35,22 @@ endsnippet
 snippet glyph "glyph" !w
 <span class="glyphicon glyphicon-$1"></span>$2
 endsnippet
+
+snippet fa "fa" !w
+<i class="fa fa-$1"></i>$2
+endsnippet
+
+snippet fg "fg" !w
+<div class="form-group">
+	${1}
+</div>
+endsnippet
+
+snippet input "input" !w
+<label for="${1:id}" class="control-label">${2:label}</label>
+<input type="${3:text}" id="$1" class="form-control">$4
+endsnippet
+
+snippet ui "ui" !w
+<img src="/images/ui/${1}" alt="${2}">${3}
+endsnippet

@@ -43,22 +43,22 @@ set scrolloff=7
 set wildmenu
 set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
-set showbreak=>
+set showbreak=→
 set cursorline
 set t_Co=256
-set linespace=1
+set linespace=3
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Source\ Code\ Pro\ 9
+	set guifont=Envy\ Code\ R\ 10
 	set background=light
-	colorscheme oceandeep
+	colorscheme molokai
 	set guioptions=agit
 else
 	colorscheme default
 endif
 
-let g:Powerline_symbols = 'unicode'
+let g:Powerline_symbols = "unicode"
 
 " Undo.
 set undodir=$HOME/.vim/undo
@@ -83,4 +83,4 @@ source ~/.vim/config/filetypes.vim
 source ~/.vim/config/commands.vim
 
 " CtrlP settings.
-let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_custom_ignore = "node_modules"
