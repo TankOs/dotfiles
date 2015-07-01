@@ -31,11 +31,15 @@ map <leader>t :NERDTreeToggle<cr>
 " Gundo.
 map <leader>u :GundoToggle<cr>
 
-" Git (Fugitive).
+" Git.
 map <leader>Gs :Gstatus<cr>
 map <leader>Gc :Gcommit<cr>
 map <leader>Gb :Gblame<cr>
 map <leader>Gd :Gdiff<cr>
+map <leader>Gg :GitGutterToggle<cr>
+
+" Tagbar
+map <leader>T :TagbarToggle<cr>
 
 " Setup custom filetype handlers and settings.
 map <leader>Fm :call MailSetup()<cr>
@@ -51,6 +55,7 @@ map <leader>do :diffoff<cr>
 
 " CtrlP.
 map <leader>f :CtrlP<cr>
+map <leader>o :CtrlPBuffer<cr>
 
 " eXecute LÖVE game.
 map <leader>xl :!love .<cr>
@@ -61,3 +66,9 @@ map <leader>Rw :BufOnly!<cr><leader>q<c-w>v<c-w>v<c-l>
 
 " Yank whole buffer.
 map <leader>y :%y+<cr>:%y<cr>
+
+" Multiple cursors.
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'

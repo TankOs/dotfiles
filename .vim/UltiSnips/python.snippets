@@ -18,3 +18,10 @@ endsnippet
 snippet sup
 super(${1:class}, self).__init__(${2:*args, **kwargs})$3
 endsnippet
+
+snippet init
+def __init__(self${1:, *args, **kwargs}):
+	super(${2:class}, self).__init__(${3:*args, **kwargs})
+
+	$4
+endsnippet

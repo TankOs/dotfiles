@@ -1,9 +1,47 @@
 " Disable compatibility to Vi.
 set nocompatible
 
-" Execute Pathogen.
-execute pathogen#infect()
-execute pathogen#helptags()
+" Settings that must be set before plug-ins are loaded.
+let g:multi_cursor_use_default_mapping=0
+
+" Setup Vundle.
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+" Vundle plug-ins.
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
+Plugin 'pangloss/vim-javascript'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'godlygeek/tabular'
+Plugin 'mileszs/ack.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-repeat'
+Plugin 'sjl/gundo.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'SirVer/ultisnips'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'othree/html5.vim'
+Plugin 'elzr/vim-json'
+Plugin 'sjbach/lusty'
+Plugin 'schickling/vim-bufonly'
+
+Plugin 'tomasr/molokai'
+Plugin 'stulzer/heroku-colorscheme'
+Plugin 'vim-scripts/C64.vim'
+
+call vundle#end()
+
+filetype plugin indent on
 
 " Indenting and layout.
 set autoindent
@@ -46,15 +84,15 @@ set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=→
 set cursorline
-set t_Co=256
+"set t_Co=256
 set linespace=3
 syntax enable
 
 if has( "gui_running" )
 	set guifont=Envy\ Code\ R\ 10
-	set background=light
-	colorscheme molokai
+	set background=dark
 	set guioptions=agit
+	colorscheme molokai
 else
 	colorscheme default
 endif
@@ -66,10 +104,6 @@ set undodir=$HOME/.vim/undo
 set undofile
 set undolevels=1000
 set undoreload=10000
-
-" Filetype settings.
-filetype plugin on
-filetype indent on
 
 " Completion (disable omni-completion).
 set omnifunc=
