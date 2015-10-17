@@ -15,7 +15,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
@@ -34,6 +33,8 @@ Plugin 'othree/html5.vim'
 Plugin 'elzr/vim-json'
 Plugin 'sjbach/lusty'
 Plugin 'schickling/vim-bufonly'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'rust-lang/rust.vim'
 
 Plugin 'tomasr/molokai'
 Plugin 'stulzer/heroku-colorscheme'
@@ -84,15 +85,15 @@ set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=→
 set cursorline
-"set t_Co=256
+set cursorcolumn
 set linespace=3
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Envy\ Code\ R\ 10
+	set guifont=Envy\ Code\ R\ 11
 	set background=dark
 	set guioptions=agit
-	colorscheme molokai
+	colorscheme wombat256
 else
 	colorscheme default
 endif

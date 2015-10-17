@@ -55,10 +55,6 @@ snippet ui "ui" !w
 <img src="/images/ui/${1}" alt="${2}">${3}
 endsnippet
 
-snippet div
-<div${1}>${2}</div>
-endsnippet
-
 snippet row
 <div class="row">
 	${2}
@@ -73,4 +69,18 @@ endsnippet
 
 snippet labelcheck
 <label class="checkbox">${1}</label>
+endsnippet
+
+snippet div
+<div class="${1}">
+$2
+</div>
+endsnippet
+
+snippet p "p" !w
+{{$1}}$2
+endsnippet
+
+snippet button "button" !w
+<button type="button" class="btn btn-${1:default}" ng-click="vm.$2">$3</button>$4
 endsnippet

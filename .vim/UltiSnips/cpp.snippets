@@ -114,10 +114,43 @@ snippet 2i64
 sf::Vector2i64
 endsnippet
 
-snippet fr
+snippet 2v "2v" !w
+sf::Vector2<${1:Type}>$2
+endsnippet
+
+snippet fr "fr" !w
 sf::FloatRect
 endsnippet
 
-snippet str
+snippet str "str" !w
 std::string
+endsnippet
+
+snippet s "s" !w
+std::
+endsnippet
+
+snippet vec "vec" !w
+std::vector<${1:type}>$2
+endsnippet
+
+snippet map "map" !w
+std::map<${1:IndexType}, ${2:ValueType}>$3
+endsnippet
+
+snippet class
+class ${1:name} {
+	public:
+		$2
+
+	private:
+};
+endsnippet
+
+snippet sc
+static_cast<${1:Type}>($2)$3
+endsnippet
+
+snippet up
+std::unique_ptr<${1:Type}> $2
 endsnippet
