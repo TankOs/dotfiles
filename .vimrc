@@ -109,6 +109,7 @@ set undoreload=10000
 " Completion (disable omni-completion).
 set omnifunc=
 set include=
+set wildignore=*/virtenv/*,*/node_modules/*
 
 " Plug-ins/scripts.
 source $VIMRUNTIME/macros/matchit.vim

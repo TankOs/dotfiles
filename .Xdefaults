@@ -1,0 +1,25 @@
+urxvt.depth: 32
+
+urxvt.scrollstyle: plain
+urxvt.scrollBar_right: true
+urxvt.scrollTtyOutput: false
+urxvt.scrollWithBuffer: true
+urxvt.scrollTtyKeypress: true
+
+urxvt.font: xft:Envy Code R:antialias=true:size=12
+#urxvt.skipBuiltinGlyphs: true
+
+urxvt.background: #000000
+urxvt.cursorColor: #f8f8f2
+urxvt.foreground: #b8b8b2
+urxvt.color12: #00aaff
+urxvt.color4: #0077ff
+urxvt.transparent: true
+urxvt.shading: 20
+
+urxvt.cursorUnderline: false
+urxvt.cursorBlink: true
+urxvt.visualBell: false
+urxvt.perl-ext-common: default,matcher
+urxvt.urlLauncher: chromium
+urxvt.matcher.button: 1
