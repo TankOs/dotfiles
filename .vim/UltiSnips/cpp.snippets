@@ -82,38 +82,6 @@ snippet 2i "2i" !w
 sf::Vector2i
 endsnippet
 
-snippet 2u8 "2u8" !w
-sf::Vector2u8
-endsnippet
-
-snippet 2i8
-sf::Vector2i8
-endsnippet
-
-snippet 2u16
-sf::Vector2u16
-endsnippet
-
-snippet 2i16
-sf::Vector2i16
-endsnippet
-
-snippet 2u32
-sf::Vector2u32
-endsnippet
-
-snippet 2i32
-sf::Vector2i32
-endsnippet
-
-snippet 2u64
-sf::Vector2u64
-endsnippet
-
-snippet 2i64
-sf::Vector2i64
-endsnippet
-
 snippet 2v "2v" !w
 sf::Vector2<${1:Type}>$2
 endsnippet
@@ -153,4 +121,57 @@ endsnippet
 
 snippet up
 std::unique_ptr<${1:Type}> $2
+endsnippet
+
+snippet config
+#pragma once
+
+#include <string>
+
+const std::string ASSETS_PATH = "@ASSETS_PATH@";
+endsnippet
+
+snippet main
+int main() {
+	${1}
+
+	return 0;
+}
+endsnippet
+
+snippet main_sfml
+#include <SFML/Graphics.hpp>
+
+#include <cstdint>
+
+const sf::VideoMode VIDEO_MODE(1280, 720);
+
+int main() {
+	sf::RenderWindow window(VIDEO_MODE, "SFML", sf::Style::Close);
+	window.setFramerateLimit(120);
+
+	sf::Event event;
+	bool terminate = false;
+	sf::Clock frame_clock;
+	sf::Time frame_time = sf::Time::Zero;
+
+	while(terminate == false) {
+		while(window.pollEvent(event) == true) {
+			if(event.type == sf::Event::KeyPressed) {
+				if(event.key.code == sf::Keyboard::Escape) {
+					terminate = true;
+				}
+			}
+		}
+
+		// Update simulation.
+		frame_time = frame_clock.restart();
+
+		// Render.
+		window.clear();
+		window.display();
+	}
+
+	return 0;
+}
 endsnippet

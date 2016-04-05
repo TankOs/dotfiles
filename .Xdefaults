@@ -6,8 +6,7 @@ urxvt.scrollTtyOutput: false
 urxvt.scrollWithBuffer: true
 urxvt.scrollTtyKeypress: true
 
-urxvt.font: xft:Envy Code R:antialias=true:size=12
-#urxvt.skipBuiltinGlyphs: true
+urxvt.font: xft:Envy Code R:antialias=true:size=13
 
 urxvt.background: #000000
 urxvt.cursorColor: #f8f8f2
@@ -15,7 +14,7 @@ urxvt.foreground: #b8b8b2
 urxvt.color12: #00aaff
 urxvt.color4: #0077ff
 urxvt.transparent: true
-urxvt.shading: 20
+urxvt.shading: 10
 
 urxvt.cursorUnderline: false
 urxvt.cursorBlink: true

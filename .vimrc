@@ -35,6 +35,7 @@ Plugin 'sjbach/lusty'
 Plugin 'schickling/vim-bufonly'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vimwiki/vimwiki'
 
 Plugin 'tomasr/molokai'
 Plugin 'stulzer/heroku-colorscheme'
@@ -85,14 +86,14 @@ set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=→
 set cursorline
-set cursorcolumn
-set linespace=3
+set linespace=4
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Envy\ Code\ R\ 11
+	set guifont=Envy\ Code\ R\ 12
 	set background=dark
 	set guioptions=agit
+  set cursorcolumn
 	colorscheme wombat256
 else
 	colorscheme default
@@ -109,7 +110,7 @@ set undoreload=10000
 " Completion (disable omni-completion).
 set omnifunc=
 set include=
-set wildignore=*/virtenv/*,*/node_modules/*
+set wildignore=*/virtenv/*,*/node_modules/*,*/extlibs/*,*/_site/*,*/__pycache__/*,*/bower_components/*,*/output/*
 
 " Plug-ins/scripts.
 source $VIMRUNTIME/macros/matchit.vim
