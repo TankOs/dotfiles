@@ -11,6 +11,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+map <leader>N :new<cr>
+
 " Buffer handling.
 map <leader>b :LustyJuggler<cr>
 map <leader>q :bdelete<cr>

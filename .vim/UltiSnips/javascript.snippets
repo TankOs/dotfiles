@@ -28,12 +28,22 @@ endsnippet
 
 snippet ctrl
 function $1($2) {
-	var vm = this;
+	const vm = this;
 
 	init();
 
 	function init() {
 	}
+}
+endsnippet
+
+snippet directive
+function $1($2) {
+	const directive = {
+		$3
+	};
+
+	return directive;
 }
 endsnippet
 
