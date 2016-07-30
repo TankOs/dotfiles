@@ -15,8 +15,8 @@ map <leader>N :new<cr>
 
 " Buffer handling.
 map <leader>b :LustyJuggler<cr>
-map <leader>q :bdelete<cr>
-map <leader>Q :BufOnly<cr>
+map <leader>q :q<cr>
+map <leader>Q :bdelete<cr>
 
 " Reload .vimrc.
 map <leader>V :source ~/.vimrc<cr>
@@ -63,7 +63,8 @@ map <leader>o :CtrlPBuffer<cr>
 map <leader>xl :!love .<cr>
 
 " Reset workspace.
-map <leader>rw <leader>t<c-l><leader>Q<leader>q<c-w>v<c-l>
+" map <leader>rw <leader>t<c-l><leader>Q<leader>q<c-w>v<c-l>
+map <leader>rw :NERDTree<cr><c-w>l:BufOnly<cr>:bdelete<cr><c-w>v
 
 " Yank whole buffer.
 map <leader>y :%y+<cr>:%y<cr>
