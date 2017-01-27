@@ -54,10 +54,54 @@ _.forEach(${1:collection}, function(${2:item}) {
 endsnippet
 
 snippet scope
-(function() {
+(() => {
 "use strict";
 
 $1
 
 })();
+endsnippet
+
+snippet comp
+export class ${1} extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div>
+			</div>
+		);
+	}
+}
+endsnippet
+
+snippet r:comp
+import React from "react";
+
+export default class ${1:Component} extends React.Component {
+	render() {
+		return (
+			<div>${2:TODO}</div>
+		);
+	}
+}
+endsnippet
+
+snippet r:ctor
+constructor(props) {
+	super(props);
+	${1}
+}
+endsnippet
+
+snippet div
+<div className="${1}">
+	${2}
+</div>
+endsnippet
+
+snippet fa
+	<i className="fa fa-${1:pencil}"/>
 endsnippet

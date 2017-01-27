@@ -14,7 +14,6 @@ map <C-l> <C-w>l
 map <leader>N :new<cr>
 
 " Buffer handling.
-map <leader>b :LustyJuggler<cr>
 map <leader>q :q<cr>
 map <leader>Q :bdelete<cr>
 
@@ -32,13 +31,6 @@ map <leader>t :NERDTreeToggle<cr>
 
 " Gundo.
 map <leader>u :GundoToggle<cr>
-
-" Git.
-map <leader>Gs :Gstatus<cr>
-map <leader>Gc :Gcommit<cr>
-map <leader>Gb :Gblame<cr>
-map <leader>Gd :Gdiff<cr>
-map <leader>Gg :GitGutterToggle<cr>
 
 " Tagbar
 map <leader>T :TagbarToggle<cr>

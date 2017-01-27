@@ -3,6 +3,7 @@ set nocompatible
 
 " Settings that must be set before plug-ins are loaded.
 let g:multi_cursor_use_default_mapping=0
+let g:airline_powerline_fonts=1
 
 " Setup Vundle.
 filetype off
@@ -13,33 +14,24 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
 Plugin 'pangloss/vim-javascript'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'godlygeek/tabular'
-Plugin 'mileszs/ack.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-repeat'
 Plugin 'sjl/gundo.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'SirVer/ultisnips'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'othree/html5.vim'
 Plugin 'elzr/vim-json'
-Plugin 'sjbach/lusty'
 Plugin 'schickling/vim-bufonly'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'rust-lang/rust.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'mxw/vim-jsx'
+"Plugin 'vim-syntastic/syntastic'
 
 Plugin 'tomasr/molokai'
-Plugin 'stulzer/heroku-colorscheme'
-Plugin 'vim-scripts/C64.vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'rakr/vim-one'
 
 call vundle#end()
 
@@ -86,20 +78,22 @@ set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=→
 set cursorline
-set linespace=4
 syntax enable
 
 if has( "gui_running" )
-	set guifont=Envy\ Code\ R\ 12
-	set background=dark
-	set guioptions=agit
+  set guifont=Terminess\ Powerline\ 12
+  set linespace=5
+  set background=dark
+  set guioptions=agit
   set cursorcolumn
-	colorscheme wombat256
-else
-	colorscheme default
-endif
 
-let g:Powerline_symbols = "unicode"
+  let g:airline_theme='one'
+  let g:one_allow_italics = 1
+
+  colorscheme one
+else
+  colorscheme default
+endif
 
 " Undo.
 set undodir=$HOME/.vim/undo
@@ -111,6 +105,19 @@ set undoreload=10000
 set omnifunc=
 set include=
 set wildignore=*/virtenv/*,*/node_modules/*,*/extlibs/*,*/_site/*,*/__pycache__/*,*/bower_components/*,*/output/*
+
+" Syntastic settings.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" JSX settings.
+let g:jsx_ext_required = 0
 
 " Plug-ins/scripts.
 source $VIMRUNTIME/macros/matchit.vim
