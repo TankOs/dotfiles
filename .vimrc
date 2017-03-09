@@ -77,15 +77,15 @@ set wildmenu
 set laststatus=2
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=→
-set cursorline
 syntax enable
 
 if has( "gui_running" )
-  set guifont=Terminess\ Powerline\ 12
+  set guifont=Roboto\ Mono\ for\ Powerline\ 12
   set linespace=5
   set background=dark
   set guioptions=agit
   set cursorcolumn
+  set cursorline
 
   let g:airline_theme='one'
   let g:one_allow_italics = 1

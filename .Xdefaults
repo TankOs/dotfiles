@@ -6,8 +6,11 @@ urxvt.scrollTtyOutput: false
 urxvt.scrollWithBuffer: true
 urxvt.scrollTtyKeypress: true
 
-!urxvt.font: xft:Envy Code R:antialias=true:size=13
-urxvt.font: xft:Terminess Powerline:style=Regular:antialias=true:size=14
+!urxvt.font: xft:Terminess Powerline:style=Regular:antialias=true:size=14
+!urxvt.font: xft:DejaVu Sans Mono for Powerline:style=Book:antialias=true:size=13
+urxvt.font: xft:Roboto Mono for Powerline:style=Light:antialias=true:size=13
+urxvt.font: xft:Roboto Mono for Powerline:style=Light:antialias=true:size=16
+urxvt.lineSpace: 3
 
 ! special
 *.foreground:   #93a1a1
