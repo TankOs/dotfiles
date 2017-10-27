@@ -3,7 +3,6 @@ set nocompatible
 
 " Settings that must be set before plug-ins are loaded.
 let g:multi_cursor_use_default_mapping=0
-let g:airline_powerline_fonts=1
 
 " Setup Vundle.
 filetype off
@@ -16,8 +15,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'sjl/gundo.vim'
 Plugin 'SirVer/ultisnips'
@@ -25,12 +22,10 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'othree/html5.vim'
 Plugin 'elzr/vim-json'
 Plugin 'schickling/vim-bufonly'
-Plugin 'vimwiki/vimwiki'
 Plugin 'mxw/vim-jsx'
-"Plugin 'vim-syntastic/syntastic'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'sotte/presenting.vim'
 
-Plugin 'tomasr/molokai'
-Plugin 'joshdick/onedark.vim'
 Plugin 'rakr/vim-one'
 
 call vundle#end()
@@ -44,6 +39,10 @@ set shiftwidth=2
 set tabstop=2
 set textwidth=0
 set expandtab
+set nowrap
+
+" Concealing
+set conceallevel=2
 
 " Buffer settings.
 set autoread
@@ -80,14 +79,13 @@ set showbreak=→
 syntax enable
 
 if has( "gui_running" )
-  set guifont=Roboto\ Mono\ for\ Powerline\ 12
-  set linespace=5
+  set guifont=Envy\ Code\ R\ 13
+  set linespace=3
   set background=dark
   set guioptions=agit
   set cursorcolumn
   set cursorline
 
-  let g:airline_theme='one'
   let g:one_allow_italics = 1
 
   colorscheme one
@@ -104,17 +102,7 @@ set undoreload=10000
 " Completion (disable omni-completion).
 set omnifunc=
 set include=
-set wildignore=*/virtenv/*,*/node_modules/*,*/extlibs/*,*/_site/*,*/__pycache__/*,*/bower_components/*,*/output/*
-
-" Syntastic settings.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+set wildignore=*/virtenv/*,*/node_modules/*,*/extlibs/*,*/_site/*,*/__pycache__/*,*/bower_components/*,*/output/*,*/build/*
 
 " JSX settings.
 let g:jsx_ext_required = 0
@@ -128,4 +116,11 @@ source ~/.vim/config/filetypes.vim
 source ~/.vim/config/commands.vim
 
 " CtrlP settings.
-let g:ctrlp_custom_ignore = "node_modules"
+let g:ctrlp_custom_ignore = "node_modules,platforms"
+
+" Markdown settings.
+let g:vim_markdown_folding_disabled = 1
+
+" Show extra whitespace.
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/

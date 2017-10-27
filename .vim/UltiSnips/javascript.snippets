@@ -1,19 +1,19 @@
 snippet log
-console.log($1);$2
+console.log($1)$2
 endsnippet
 
 snippet info
-console.info($1);$2
+console.info($1)$2
 endsnippet
 
 snippet error
-console.error($1);$2
+console.error($1)$2
 endsnippet
 
 snippet fun
-function$1($2) {
-	$3
-}$4
+function${1}(${2}) {
+	${3}
+}${4}
 endsnippet
 
 snippet fix
@@ -28,9 +28,9 @@ endsnippet
 
 snippet ctrl
 function $1($2) {
-	const vm = this;
+	const vm = this
 
-	init();
+	init()
 
 	function init() {
 	}
@@ -41,57 +41,52 @@ snippet directive
 function $1($2) {
 	const directive = {
 		$3
-	};
+	}
 
-	return directive;
+	return directive
 }
 endsnippet
 
 snippet foreach
 _.forEach(${1:collection}, function(${2:item}) {
 		$3
-});
+})
 endsnippet
 
 snippet scope
 (() => {
-"use strict";
+"use strict"
 
 $1
 
-})();
+})()
 endsnippet
 
 snippet comp
 export class ${1} extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
-			<div>
-			</div>
-		);
+			<div>${2}</div>
+		)
 	}
 }
 endsnippet
 
 snippet r:comp
-import React from "react";
+import React from "react"
 
-export default class ${1:Component} extends React.Component {
+export class ${1:Component} extends React.Component {
 	render() {
 		return (
 			<div>${2:TODO}</div>
-		);
+		)
 	}
 }
 endsnippet
 
 snippet r:ctor
 constructor(props) {
-	super(props);
+	super(props)
 	${1}
 }
 endsnippet
@@ -104,4 +99,12 @@ endsnippet
 
 snippet fa
 <i className="fa fa-${1:pencil}"/>
+endsnippet
+
+snippet test
+Hallo ${1:Welt}, du liebe $1!
+endsnippet
+
+snippet imui
+import ${1} from "material-ui/$1"${2}
 endsnippet

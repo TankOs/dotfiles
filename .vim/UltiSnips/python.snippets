@@ -48,14 +48,35 @@ endsnippet
 snippet model
 class ${1}(models.Model):
 	class Meta:
-		ordering = ("${2}",)
+		${2:pass}
 
 	${3}
 
 	def __str__(self):
-		return self.$2
+		return ${4}
 endsnippet
 
 snippet re
 RuntimeError("${1}")
+endsnippet
+
+snippet asr
+admin.site.register(models.${1}, $1Admin)
+endsnippet
+
+snippet admin
+class ${1}Admin(admin.ModelAdmin):
+	list_display = ($2)
+	list_filter = ($3)
+	raw_id_fields = ($4)
+	search_fields = ($5)
+	ordering = ($6)
+endsnippet
+
+snippet ipp
+from pprint import pprint
+endsnippet
+
+snippet pp
+pprint(${1})${2}
 endsnippet

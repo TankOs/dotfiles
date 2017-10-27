@@ -12,6 +12,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 map <leader>N :new<cr>
+map <C-_> <C-w>_
 
 " Buffer handling.
 map <leader>q :q<cr>
@@ -55,11 +56,11 @@ map <leader>o :CtrlPBuffer<cr>
 map <leader>xl :!love .<cr>
 
 " Reset workspace.
-" map <leader>rw <leader>t<c-l><leader>Q<leader>q<c-w>v<c-l>
 map <leader>rw :NERDTree<cr><c-w>l:BufOnly<cr>:bdelete<cr><c-w>v
+" map <leader>rw :BufOnly<cr>:bdelete<cr><c-w>v
 
 " Yank whole buffer.
-map <leader>y :%y+<cr>:%y<cr>
+map <leader>y :%y+<cr>:%y*<cr>:%y<cr>
 
 " Multiple cursors.
 let g:multi_cursor_next_key='<C-n>'
